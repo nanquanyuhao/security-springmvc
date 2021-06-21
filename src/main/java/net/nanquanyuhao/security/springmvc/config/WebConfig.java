@@ -29,6 +29,11 @@ public class WebConfig implements WebMvcConfigurer {
         return viewResolver;
     }
 
+    /**
+     * 用于对照新增的 url
+     *
+     * @param registry
+     */
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/").setViewName("login");
