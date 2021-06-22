@@ -6,9 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 
 /**
  * @author Administrator
@@ -25,6 +23,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
      */
     @Override
     public UserDto authentication(AuthenticationRequest authenticationRequest) {
+
         //校验参数是否为空
         if (authenticationRequest == null
                 || StringUtils.isEmpty(authenticationRequest.getUsername())
