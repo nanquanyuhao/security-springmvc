@@ -3,6 +3,8 @@ package net.nanquanyuhao.security.springmvc.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+import java.util.Set;
+
 /**
  * @author Administrator
  * @version 1.0
@@ -23,4 +25,9 @@ public class UserDto {
     private String fullname;
 
     private String mobile;
+
+    /**
+     * 用户权限
+     */
+    private Set<String> authorities;
 }

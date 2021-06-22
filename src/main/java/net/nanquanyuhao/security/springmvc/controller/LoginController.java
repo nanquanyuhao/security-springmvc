@@ -63,4 +63,26 @@ public class LoginController {
 
         return fullname + "访问资源 r1";
     }
+
+    /**
+     * 资源访问逻辑2
+     *
+     * @param session
+     * @return
+     */
+    @GetMapping(value = "/r/r2", produces = {"text/plain;charset=utf-8"})
+    public String r2(HttpSession session) {
+
+        String fullname = null;
+        Object attribute = session.getAttribute(UserDto.SESSION_USER_KEY);
+
+        if (attribute == null) {
+            fullname = "匿名";
+        } else {
+            UserDto userDto = (UserDto) attribute;
+            fullname = userDto.getFullname();
+        }
+
+        return fullname + "访问资源 r2";
+    }
 }
