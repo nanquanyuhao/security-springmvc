@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class LoginController {
 
     @Autowired
-    AuthenticationService authenticationService;
+    private AuthenticationService authenticationService;
 
     @RequestMapping(value = "/login", produces = "text/plain;charset=utf-8")
     public String login(AuthenticationRequest authenticationRequest) {
